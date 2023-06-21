@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            background-color: #0c0c0ce6;
+            overflow-x: hidden;
+        }
+
+        .wel {
+            position: relative;
+            font-weight: bold;
+            font-size: 4.5em;
+            /* em makes font size 4.5 times bigger than original */
+            color: white;
+            left: 40%;
+            /* top: 45%; */
+        }
+
+        .wel .letters {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0.3em;
+            right: 0;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <section class="head">
+                <h1 class="wel">
+                    <span class="letters letter-1">Welcome!</span>
+                    <span class="letters letter-2">To My</span>
+                    <span class="letters letter-3">Portfolio:)</span>
+                </h1>
+            </section>
+        </header>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        let wel = {
+            opacityIn: [0, 1],
+            scaleIn:[0.2,1],
+            scaleOut:3,
+            durationIn:800,
+            durationOut:600,
+            delay:500
+        };
+        // wel.opacityIn = [0,1];
+        // wel.scaleIn = [0.2,1];
+        // wel.scaleOut = 3;
+        // wel.durationIn = 800;
+        // wel.durationOut =600;
+        // wel.delay = 500;
+
+        anime
+            .timeline({ loop: true })
+            .add({
+                targets: ".wel .letter-1",
+                opacity: wel.opacityIn,
+                scale: wel.scaleIn,
+                duration: wel.durationIn
+            })
+            .add({
+                targets: ".wel .letter-1",
+                opacity: 0,
+                scale: wel.scaleOut,
+                duration: wel.durationOut,
+                easing: "easeInExpo",
+                delay: wel.delay
+
+            }).add({
+                targets: ".wel .letter-2",
+                opacity: wel.opacityIn,
+                scale: wel.scaleIn,
+                duration: wel.durationIn
+            })
+            .add({
+                targets: ".wel .letter-2",
+                opacity: 0,
+                scale: wel.scaleOut,
+                duration: wel.durationOut,
+                easing: "easeInExpo",
+                delay: wel.delay
+
+            }).add({
+                targets: ".wel .letter-3",
+                opacity: wel.opacityIn,
+                scale: wel.scaleIn,
+                duration: wel.durationIn
+            })
+            .add({
+                targets: ".wel .letter-3",
+                opacity: 0,
+                scale: wel.scaleOut,
+                duration: wel.durationOut,
+                easing: "easeInExpo",
+                delay: wel.delay
+
+            });
+    </script>
+</body>
+
+</html>
