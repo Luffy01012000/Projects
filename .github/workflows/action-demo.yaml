@@ -5,7 +5,7 @@ on:
     branches: 
       - githubAction
     paths:
-      - '${{github.repository}}/demo/*.txt' 
+      - '${{github.workspace}}/demo/*.txt' 
       #- "Projects/To-DoApp/app2"
   pull_request:
     branches: [githubAction]
