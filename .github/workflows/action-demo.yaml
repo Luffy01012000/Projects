@@ -2,7 +2,8 @@ name: Github Action demo #optional
 #on: [push] #action
 on:  
   push:
-    branches: [githubAction]
+    branches: 
+      - githubAction
     paths:
       - '${{github.repository}}/demo/*.txt' 
       #- "Projects/To-DoApp/app2"
