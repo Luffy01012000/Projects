@@ -25,4 +25,4 @@ jobs:  #running tasks whenever the on event triggers
         #kubescape scan --enable-host-scan
 
       - name: Scan yml files
-        run: kubescape scan framework nsa */*.yaml
+        run: kubescape scan *.yaml
