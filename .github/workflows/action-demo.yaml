@@ -2,9 +2,9 @@ name: Github Action demo #optional
 #on: [push] #action
 on:  
   push:
-    branches: [main]
+    branches: [githubAction]
   pull_request:
-    branches: [main]
+    branches: [githubAction]
 
 jobs:  #running tasks whenever the on event triggers
   Trying_out_Github_Action:
@@ -18,11 +18,11 @@ jobs:  #running tasks whenever the on event triggers
       - run: | # '|' pipe use for multiline
           ls ${{github.workspace}}
           echo "${{job.status}}."
-      - name: Install kubescape
-        run: curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.sh | /bin/bash
-      - name: config path
-        run: |
-          export PATH=$PATH:/home/runner/.kubescape/bin
+      #- name: Install kubescape
+        #run: curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.sh | /bin/bash
+      #- name: config path
+        #run: |
+          #export PATH=$PATH:/home/runner/.kubescape/bin
         #kubescape scan --enable-host-scan
 
       #- name: Scan yml files
