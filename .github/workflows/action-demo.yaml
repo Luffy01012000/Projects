@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:  #running tasks whenever the on event triggers
-  Trying out Github Action:
+  Trying_out_Github_Action:
     runs-on: ubuntu-latest
     steps:
       - run: echo "This is automatically trigger event by ${{github.event_name}}"
