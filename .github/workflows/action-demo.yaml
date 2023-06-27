@@ -3,6 +3,9 @@ name: Github Action demo #optional
 on:  
   push:
     branches: [githubAction]
+    paths:
+      #- "Projects/To-DoApp/app2"
+      - "demo/"
   pull_request:
     branches: [githubAction]
 
