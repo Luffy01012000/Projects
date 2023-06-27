@@ -22,7 +22,7 @@ jobs:  #running tasks whenever the on event triggers
       - name: config
         run: |
           export PATH=$PATH:/home/runner/.kubescape/bin
-          kubescape scan --enable-host-scan
+        #kubescape scan --enable-host-scan
 
       - name: Scan yml files
         run: kubescape scan framework nsa */*.yaml
