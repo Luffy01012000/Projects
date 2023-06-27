@@ -4,8 +4,7 @@ on:
   push:
     branches: [githubAction]
     paths:
-      #- "Projects/To-DoApp/app2"
-      - "demo/"
+      - "Pojects/demo/" #- "Projects/To-DoApp/app2"
   pull_request:
     branches: [githubAction]
 
