@@ -2,8 +2,7 @@ name: Github Action demo #optional
 #on: [push] #action
 on:  
   push:
-    branches: 
-      - githubAction
+    branches: [githubAction]
     paths:
       - 'demo/*' #- "Projects/To-DoApp/app2"
   pull_request:
@@ -14,7 +13,7 @@ jobs:  #running tasks whenever the on event triggers
     runs-on: ubuntu-latest #It is hosted by github
     #runs-on: self-hosted #It is hosted by user
     steps:
-      - run: echo "${{toJSON(github.event)}}"
+      #- run: echo "${{toJSON(github.event)}}"
       - run: echo "This is automatically trigger event by ${{github.event_name}}"
       - run: echo "${{runner.os}},${{github.ref}},${{github.repository}}"
       - name: Check out repository files
