@@ -11,8 +11,8 @@ on:
 
 jobs:  #running tasks whenever the on event triggers
   Trying_out_Github_Action:
-    #runs-on: ubuntu-latest #It is hosted by github
-    runs-on: self-hosted #It is hosted by user
+    runs-on: ubuntu-latest #It is hosted by github
+    #runs-on: self-hosted #It is hosted by user
     steps:
       - run: echo "${{toJSON(github.event)}}"
       - run: echo "This is automatically trigger event by ${{github.event_name}}"
