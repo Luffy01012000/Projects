@@ -1,0 +1,23 @@
+.block{
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.App{
+  margin-top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row{
+  
+
+}
